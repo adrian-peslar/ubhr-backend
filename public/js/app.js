@@ -7365,7 +7365,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! socket.io-client */ "./node_modules/socket.io-client/wrapper.mjs");
 /* harmony import */ var UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! UBHR/services/appData */ "./resources/js/services/appData.js");
 /* harmony import */ var UBHR_actions_chatActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! UBHR/actions/chatActions */ "./resources/js/actions/chatActions.js");
-var SERVER = 'http://127.0.0.1:8080';
+var SERVER = 'https://ubhr.net:8080';
 
 
 

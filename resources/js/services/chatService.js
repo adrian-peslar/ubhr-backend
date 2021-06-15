@@ -1,4 +1,4 @@
-const SERVER = 'http://127.0.0.1:8080';
+const SERVER = 'https://ubhr.net:8080';
 import socketClient from 'socket.io-client';
 import appData from 'UBHR/services/appData';
 import { setChatUsers } from 'UBHR/actions/chatActions';
