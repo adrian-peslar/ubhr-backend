@@ -23,7 +23,7 @@ set('allow_anonymous_stats', false);
 // Hosts
 
 host('ubhr.net')
-    ->user('root')
+    ->user('deploy')
     ->set('deploy_path', '/var/www/{{application}}');    
     
 // Tasks
