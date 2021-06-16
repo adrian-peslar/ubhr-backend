@@ -220,7 +220,7 @@ const Conversation = (props) => {
                 style={{ display: makingCall || callAccepted ? 'grid' : 'none' }}
             >
                 <div className="video">
-                    {stream && <video muted playsInline ref={myVideo} autoPlay style={{ width: '400px' }} />}
+                    {stream && <video playsInline muted ref={myVideo} autoPlay style={{ width: '400px' }} />}
                 </div>
                 <div className="video">
                     {callAccepted && !callEnded ? (

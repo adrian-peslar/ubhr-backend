@@ -6127,8 +6127,8 @@ var Conversation = function Conversation(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "video",
         children: stream && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("video", {
-          muted: true,
           playsInline: true,
+          muted: true,
           ref: myVideo,
           autoPlay: true,
           style: {
