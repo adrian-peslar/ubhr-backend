@@ -13,7 +13,7 @@ class Home extends Component {
         return (
             <div>
                 <Header />
-                <span>Public home page</span>
+                <span>Pagina publica</span>
                 <Footer />
             </div>
         );

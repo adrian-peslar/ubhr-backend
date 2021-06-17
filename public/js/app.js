@@ -5495,14 +5495,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // User is LoggedIn
 
 
 
 
 
 
-var Main = function Main(props) {
+var Main = function Main() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Switch, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
@@ -5673,18 +5672,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       switch (_context.prev = _context.next) {
         case 0:
           state = JSON.parse(localStorage['appState']);
-          console.log('state', state);
-          _context.next = 4;
+          _context.next = 3;
           return axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/contacts', {
             headers: {
               Authorization: 'Bearer ' + state.user.access_token
             }
           });
 
-        case 4:
+        case 3:
           return _context.abrupt("return", _context.sent);
 
-        case 5:
+        case 4:
         case "end":
           return _context.stop();
       }
@@ -6128,9 +6126,9 @@ var Conversation = function Conversation(props) {
         className: "video",
         children: stream && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("video", {
           playsInline: true,
+          autoPlay: true,
           muted: true,
           ref: myVideo,
-          autoPlay: true,
           style: {
             width: '400px'
           }
@@ -6170,22 +6168,11 @@ var Conversation = function Conversation(props) {
           })]
         })]
       }), makingCall || receivingCall ? '' : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           style: {
             height: '400px',
             flexWrap: 'wrap-reverse'
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            children: "1"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            children: "2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            children: "3"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            children: "4"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-            children: "5"
-          })]
+          }
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           style: {
             borderTop: '1px solid #d0d7de',
@@ -6318,6 +6305,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var Header = /*#__PURE__*/function (_Component) {
   _inherits(Header, _Component);
 
@@ -6354,34 +6342,41 @@ var Header = /*#__PURE__*/function (_Component) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
           className: "ml10",
           children: "|"
-        }), this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "ml10",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-            to: "/dashboard",
-            children: "Panou"
-          })
-        }) : '', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "ml10",
-          children: "|"
-        }), this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+        }), this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "ml10",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              to: "/dashboard",
+              children: "Panou"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "ml10",
+            children: "|"
+          })]
+        }) : '', this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
           className: "ml10",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
             onClick: this.logOut,
             href: "/login",
             children: "Ie\u0219ire din cont"
           })
-        }) : '', !this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "ml10",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-            to: "/login",
-            children: "Login"
-          })
-        }) | /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          className: "ml10",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-            to: "/register",
-            children: "Register"
-          })
+        }) : '', !this.props.isLoggedIn ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "ml10",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              to: "/login",
+              children: "Login"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "ml10",
+            children: "|"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "ml10",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              to: "/register",
+              children: "Register"
+            })
+          })]
         }) : '']
       });
     }
@@ -6472,7 +6467,7 @@ var Home = /*#__PURE__*/function (_Component) {
       console.log('Home');
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Header__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
-          children: "Public home page"
+          children: "Pagina publica"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_2__.default, {})]
       });
     }
@@ -7373,11 +7368,10 @@ var SERVER = 'https://ubhr.net';
 var isLoggedIn = false;
 function chatService(store) {
   UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__.default.socket = (0,socket_io_client__WEBPACK_IMPORTED_MODULE_0__.default)(SERVER);
-  UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__.default.socket.on('connection', function (myID) {
-    console.log("I'm connected with the back-end", myID);
+  UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__.default.socket.on('connection', function (myID) {// console.log(`Sunt conectat la server `, myID);
   });
   UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__.default.socket.on('getUsers', function (users) {
-    console.log('users', users);
+    // console.log('users', users);
     store.dispatch((0,UBHR_actions_chatActions__WEBPACK_IMPORTED_MODULE_2__.setChatUsers)({
       users: users
     }));
@@ -7396,15 +7390,11 @@ function chatService(store) {
     isLoggedIn = retrieveIsLoggedIn(store.getState());
 
     if (previousIsLoggedIn !== isLoggedIn) {
-      console.log('s-a miscat ceva');
-
       if (isLoggedIn === true) {
-        console.log('userul s-a logat');
+        // console.log('userul s-a logat');
         var user = retrieveUser(store.getState());
-        console.log('user', user);
         UBHR_services_appData__WEBPACK_IMPORTED_MODULE_1__.default.socket.emit('addUser', user.id);
-      } else {
-        console.log('userul s-a delogat');
+      } else {// console.log('userul s-a delogat');
       }
     }
   }

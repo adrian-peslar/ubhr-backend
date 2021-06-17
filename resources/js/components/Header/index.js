@@ -23,13 +23,16 @@ class Header extends Component {
                 </span>
                 <span className="ml10">|</span>
                 {this.props.isLoggedIn ? (
-                    <span className="ml10">
-                        <Link to="/dashboard">Panou</Link>
-                    </span>
+                    <>
+                        <span className="ml10">
+                            <Link to="/dashboard">Panou</Link>
+                        </span>
+                        <span className="ml10">|</span>
+                    </>
                 ) : (
                     ''
                 )}
-                <span className="ml10">|</span>
+
                 {this.props.isLoggedIn ? (
                     <span className="ml10">
                         <a onClick={this.logOut} href="/login">
@@ -39,18 +42,19 @@ class Header extends Component {
                 ) : (
                     ''
                 )}
-                {!this.props.isLoggedIn
-                    ? (
-                          <span className="ml10">
-                              <Link to="/login">Login</Link>
-                          </span>
-                      ) |
-                      (
-                          <span className="ml10">
-                              <Link to="/register">Register</Link>
-                          </span>
-                      )
-                    : ''}
+                {!this.props.isLoggedIn ? (
+                    <>
+                        <span className="ml10">
+                            <Link to="/login">Login</Link>
+                        </span>
+                        <span className="ml10">|</span>
+                        <span className="ml10">
+                            <Link to="/register">Register</Link>
+                        </span>
+                    </>
+                ) : (
+                    ''
+                )}
             </div>
         );
     }

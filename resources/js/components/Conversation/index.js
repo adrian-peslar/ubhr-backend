@@ -220,7 +220,7 @@ const Conversation = (props) => {
                 style={{ display: makingCall || callAccepted ? 'grid' : 'none' }}
             >
                 <div className="video">
-                    {stream && <video playsInline muted ref={myVideo} autoPlay style={{ width: '400px' }} />}
+                    {stream && <video playsInline autoPlay muted ref={myVideo} style={{ width: '400px' }} />}
                 </div>
                 <div className="video">
                     {callAccepted && !callEnded ? (
@@ -267,13 +267,7 @@ const Conversation = (props) => {
                         ''
                     ) : (
                         <div>
-                            <div style={{ height: '400px', flexWrap: 'wrap-reverse' }}>
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                                <div>4</div>
-                                <div>5</div>
-                            </div>
+                            <div style={{ height: '400px', flexWrap: 'wrap-reverse' }}></div>
                             <div style={{ borderTop: '1px solid #d0d7de', height: '40px', display: 'flex' }}>
                                 <input
                                     value={textValue}

@@ -8,11 +8,11 @@ let isLoggedIn = false;
 export function chatService(store) {
     appData.socket = socketClient(SERVER);
     appData.socket.on('connection', (myID) => {
-        console.log(`I'm connected with the back-end`, myID);
+        // console.log(`Sunt conectat la server `, myID);
     });
 
     appData.socket.on('getUsers', (users) => {
-        console.log('users', users);
+        // console.log('users', users);
         store.dispatch(setChatUsers({ users }));
     });
 
@@ -27,14 +27,12 @@ export function chatService(store) {
         let previousIsLoggedIn = isLoggedIn;
         isLoggedIn = retrieveIsLoggedIn(store.getState());
         if (previousIsLoggedIn !== isLoggedIn) {
-            console.log('s-a miscat ceva');
             if (isLoggedIn === true) {
-                console.log('userul s-a logat');
+                // console.log('userul s-a logat');
                 const user = retrieveUser(store.getState());
-                console.log('user', user);
                 appData.socket.emit('addUser', user.id);
             } else {
-                console.log('userul s-a delogat');
+                // console.log('userul s-a delogat');
             }
         }
     }
